@@ -1,4 +1,4 @@
-public class PremiumMember extends Member{
+public class PremiumMember extends Member implements MassageBed, TanningBed{
 
     public PremiumMember(String firstName, String lastName, String memberId, int age, double height, double weight, String membershipType) {
         super(firstName, lastName, memberId, age, height, weight, membershipType);
@@ -21,6 +21,18 @@ public class PremiumMember extends Member{
     public void buyingProducts(double money) {
         System.out.println("Amount due = " + money +
                 "\nYou do have %50 discount!");
+    }
+
+    @Override
+    public void getMassage(String type, String intensity) {
+        System.out.println("Type of the massage = " + type +
+                "\nIntensity of the massage = " + intensity);
+    }
+
+    @Override
+    public void getTanned(String duration, String shade) {
+        System.out.println("Duration = " + duration +
+                "\nShade that you chose = " + shade);
     }
 
     public static PremiumMember getPremiumMember(){
