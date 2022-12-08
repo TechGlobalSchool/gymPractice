@@ -9,6 +9,17 @@ public class PremiumMember extends Member implements MassageBed, TanningBed{
     @Override
     public void workingOut(String duration) {
         System.out.println("Premium member is working out for " + duration + ".");
+
+        if (duration.toLowerCase().contains("hour")) {
+            System.out.println("Beast mode!");
+        } else {
+            int mins = Integer.parseInt(duration.substring(0, duration.indexOf(" ")));
+            if (mins <= 30) {
+                System.out.println("Not a good workout!");
+            } else {
+                System.out.println("Not bad!");
+            }
+        }
     }
 
     @Override
