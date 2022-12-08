@@ -30,6 +30,11 @@ public class Gym {
         }
 
         //create 5 random members (standard or premium)
-        //
+        //scan the member (modify)
+        //let them workout
+        //make them buy products
+        //get massage (if it is premium member)
+        //get tanned (if it is premium member)
+        //print the member
     }
 }
